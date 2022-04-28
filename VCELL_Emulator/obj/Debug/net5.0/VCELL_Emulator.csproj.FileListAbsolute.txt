@@ -1,0 +1,16 @@
+C:\Users\azuka\source\repos\VCELL_Emulator\bin\Debug\net5.0\VCELL_Emulator.exe
+C:\Users\azuka\source\repos\VCELL_Emulator\bin\Debug\net5.0\VCELL_Emulator.deps.json
+C:\Users\azuka\source\repos\VCELL_Emulator\bin\Debug\net5.0\VCELL_Emulator.runtimeconfig.json
+C:\Users\azuka\source\repos\VCELL_Emulator\bin\Debug\net5.0\VCELL_Emulator.runtimeconfig.dev.json
+C:\Users\azuka\source\repos\VCELL_Emulator\bin\Debug\net5.0\VCELL_Emulator.dll
+C:\Users\azuka\source\repos\VCELL_Emulator\bin\Debug\net5.0\ref\VCELL_Emulator.dll
+C:\Users\azuka\source\repos\VCELL_Emulator\bin\Debug\net5.0\VCELL_Emulator.pdb
+C:\Users\azuka\source\repos\VCELL_Emulator\obj\Debug\net5.0\VCELL_Emulator.csproj.AssemblyReference.cache
+C:\Users\azuka\source\repos\VCELL_Emulator\obj\Debug\net5.0\VCELL_Emulator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azuka\source\repos\VCELL_Emulator\obj\Debug\net5.0\VCELL_Emulator.AssemblyInfoInputs.cache
+C:\Users\azuka\source\repos\VCELL_Emulator\obj\Debug\net5.0\VCELL_Emulator.AssemblyInfo.cs
+C:\Users\azuka\source\repos\VCELL_Emulator\obj\Debug\net5.0\VCELL_Emulator.csproj.CoreCompileInputs.cache
+C:\Users\azuka\source\repos\VCELL_Emulator\obj\Debug\net5.0\VCELL_Emulator.dll
+C:\Users\azuka\source\repos\VCELL_Emulator\obj\Debug\net5.0\ref\VCELL_Emulator.dll
+C:\Users\azuka\source\repos\VCELL_Emulator\obj\Debug\net5.0\VCELL_Emulator.pdb
+C:\Users\azuka\source\repos\VCELL_Emulator\obj\Debug\net5.0\VCELL_Emulator.genruntimeconfig.cache
