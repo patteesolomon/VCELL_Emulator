@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections; // do this in order to use ArrayList and other cool things 
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +10,17 @@ namespace VCELL_Emulator
     public partial class TaskBase
     {
         public MemoryBank Memories = new MemoryBank();
-        delegate void presetTaskLookup(Action task);
-        delegate void presetThinkLookup(Think task);
-        Action Action { get; set; }
-        Think Think { get; set; }
+        delegate void presetTaskLookup (Action task);
+        delegate void presetThinkLookup (Think task);
+        public Action Action { get; set; }
+        public Think Think { get; set; }
+
         public TaskBase this[int index]
         {
-            get { return this[index]; }
+            get 
+            { 
+                return this[index]; 
+            }
             set 
             {
                 this[index] = value;
@@ -25,7 +30,8 @@ namespace VCELL_Emulator
         public Action FetchAction(int e)
         {
         # region bloat
-            int[] nums= { 1 , 3 ,5 ,6, -2, 4};
+
+            int[] nums = { 1, 3, 5, 6, -2, 4};
 
             //method syntax
             var nummeth = nums.Where(x => (x % 2 == e)).OrderBy(x => x);
@@ -69,27 +75,34 @@ namespace VCELL_Emulator
 
         public Action grabPresetTaskList(int e)
         {
+            List<Action> redundants = new List<Action>;
+            int redundaC;
+
             Action[] tasks =
             {
-                new Action() { idea = memoryThinkTank
-                (e, ea: Memories), what = "Walk_Around", times = 1, /*(Action.thing.ACT)0*/},
+                new Action() 
+                { 
+                idea = memoryThinkTank
+                (e, ea: Memories), what = "Walk_Around", times = 1, 
+                /*(Action.thing.ACT)0*/
+                },
 
             };
+
             Action[] actions = tasks.Where(s => s.times > 13).ToArray();
 
             String[] stall = tasks.Where(s => s.what == "still"|"stall"|"wait"|"processing"|" "|""|"waiting").FirstOrDefault();
 
             String doing = tasks.Where(s => s.times == 20).FirstOrDefault();
-            
-            List<Action> redundants;
-            int redundaC;
+
             foreach(Action action in tasks)
             {
                 redundants.Add(action);
                 ++redundaC;
             }
+
             redundants.Clear();
-            Console.WriteLine(redundaC + " : "+"redundancies cleared");
+            Console.WriteLine(redundaC +" : " + "redundancies cleared");
             return tasks[e];
         }
 
@@ -98,10 +111,19 @@ namespace VCELL_Emulator
             return ea[e].e;
         }
 
-        #region basic af funcions
-        public static void Walk()
+        #region basic funcions
+        public static void arrayListDemo()
         {
-            
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add("me");
+
+            arrayList.Insert(1, "efm");
+
+            arrayList.Reverse();
+            foreach(var j in arrayList)
+            {
+                Console.WriteLine(j);
+            }
         }
         #endregion
     }
