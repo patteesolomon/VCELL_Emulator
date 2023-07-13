@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Linq;
 
 namespace VCELL_Emulator
 {
@@ -14,9 +12,9 @@ namespace VCELL_Emulator
         public double in2r = 0;
         public double in3r = 0;
 
-        public double findMax()
+        public double[] FindMax(int ie)
         {
-            int me = in1 + in2 + in3;
+            double me = (double)in1 + (double)in2 + (double)in3;
             ArrayList ec = new ArrayList();
             ec.Add(in1r);
             ec.Add(in2r);
@@ -26,11 +24,20 @@ namespace VCELL_Emulator
             stufs.Add(in2);
             stufs.Add(in3);
 
-            foreach(var v in ec)
+            double iter1;
+            double iter2;
+            double iter3;
+            ArrayList itrs = new ArrayList();
+
+            for(int i = 0; ec.Count > i; i++)
             {
-                foreach(var v2 in stufs)
-                v = v2 / me;
+                foreach (double v2 in stufs)
+                {
+                    ec[i] = v2 / me;
+                }
+                itrs.Add(ec[i]);
             }
+            return (double[])itrs[ie];
         }
     }
 }

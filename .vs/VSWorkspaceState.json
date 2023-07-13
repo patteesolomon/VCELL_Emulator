@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\VCELL_Emulator"
   ],
-  "SelectedNode": "\\C:\\Users\\azuka\\Source\\Repos\\VCELL_Emulator",
+  "SelectedNode": "\\VCELL_Emulator\\Differential.cs",
   "PreviewInSolutionExplorer": false
 }

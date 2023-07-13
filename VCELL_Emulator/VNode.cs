@@ -11,7 +11,11 @@ namespace VCELL_Emulator
         public string name;
         public object data; // this is vauge but it'll work for now.
                             // It should be the input data from the environment.
-        public int statData; // this is for the stats to be read
+                            // decode and encode this as bytes 
+
+        public int index; // this is for the stats to be read as an indexer id
+
+        public int statData; // statPoint
         public VNode previous;
         public VNode next;
 
@@ -21,11 +25,16 @@ namespace VCELL_Emulator
         // unique address
         public string uAddr;
 
+        //emulator addons
+        public Action actm;
+        public Think thinke;
+
         private static readonly Random random = new();
 
         public static string RandomString(int length)
         {
-            const string chars = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789";
+            const string chars = 
+                "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789";
             return new string(Enumerable.Repeat(chars, length)
                 .Select(s => s[random.Next(s.Length)])
                 .ToArray());
@@ -34,7 +43,7 @@ namespace VCELL_Emulator
         public VNode()
         {
             uAddr = RandomString(4);
-            data = null;
+            data = 1;
             next = null;
             RightChild = null;
             LeftChild = null;

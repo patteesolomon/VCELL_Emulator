@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//class calls
+using static System.Console;
+
 namespace VCELL_Emulator
 {
     // How do I instil desire?
@@ -25,5 +28,12 @@ namespace VCELL_Emulator
          * is being able to use it across multiple 
          * classes with ease.
          */
+        public static void Message(string mess)
+        {
+            WriteLine(mess);
+        }
+            public string Name { get; set; } = "Nuggeto";
+            public int Amount { get; set; } = 1;
+            public int Dopamine { get; set; } = 1;
     }
 }

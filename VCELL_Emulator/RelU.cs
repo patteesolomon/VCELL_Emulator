@@ -1,18 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace VCELL_Emulator
 {
     public class RelU
     {
         private double inputx;
+        private double inputy;
 
         public RelU(double x)
         {
-            relU(x);
+            TRelU(x);
         }
 
         public RelU(double x, double add)
         {
-            relU(x + add);
+            TRelU(x + add);
         }
 
         public double GetInputx()
@@ -20,12 +23,17 @@ namespace VCELL_Emulator
             return inputx;
         }
 
+        public double GetInputy()
+        {
+            return inputy;
+        }
+
         public void SetInputx(double value)
         {
             inputx = value;
         }
 
-        double relU(double x)
+        double TRelU(double x)
         {
             return Math.Max(0, x);
         }
@@ -35,5 +43,14 @@ namespace VCELL_Emulator
         /// sigmoid can do the rest for 
         /// the deep learning 
         /// or maybe something else
+        
+        static int TRelUFunc(int x)
+        {
+            if (x > 0)
+            {
+                return x;
+            }
+            return 0; // - 1 ?
+        }
     }
 }
